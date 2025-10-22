@@ -1,165 +1,151 @@
-# TwoDark Yazi Flavor
-# Based on the TwoDark tmTheme color scheme
+# : Manager {{{
+[manager]
+cwd = { fg = "#61AFEF" }  # Blue
 
-[palette]
-bg = "#282C34"
-fg = "#ABB2BF"
-selection = "#3D4350"
-line_highlight = "#2B313A"
-caret = "#528BFF"
-gutter_bg = "#393939"
-gutter_fg = "#747369"
-gutter_selection_bg = "#515151"
-gutter_selection_fg = "#a09f93"
+# Hovered
+hovered = { bg = "#282C34" }  # Darkened background
+preview_hovered = { underline = true }
 
-# Syntax colors
-comment = "#5C6370"
-keyword = "#C678DD"
-string = "#98C379"
-function = "#61AFEF"
-variable = "#E06C75"
-class = "#E5C07B"
-number = "#D19A66"
-type = "#E5C07B"
-constant = "#D19A66"
+# Find
+find_keyword = { fg = "#E06C75", italic = true, underline = true }  # Red
+find_position = { fg = "#D19A66", italic = true }  # Orange
 
-# UI colors
-border = "#393939"
-accent = "#61AFEF"
-error = "#E06C75"
-warning = "#E5C07B"
-success = "#98C379"
+# Marker
+marker_copied = { fg = "#ABB2BF", bg = "#98C379" }  # Light gray on Green
+marker_cut = { fg = "#ABB2BF", bg = "#E06C75" }  # Light gray on Red
+marker_marked = { fg = "#ABB2BF", bg = "#56B6C2" }  # Light gray on cyan
+marker_selected = { fg = "#ABB2BF", bg = "#D19A66" }  # Light gray on Orange
 
-[mgr]
-cwd = { fg = "accent", bold = true }
-hovered = { bg = "selection" }
-preview_hovered = { bg = "selection" }
-find_keyword = { fg = "accent", bold = true }
-find_position = { fg = "comment" }
-marker_selected = { fg = "accent" }
-marker_copied = { fg = "success" }
-marker_cut = { fg = "error" }
-marker_marked = { fg = "warning" }
-count_selected = { fg = "accent", bold = true }
-count_copied = { fg = "success", bold = true }
-count_cut = { fg = "error", bold = true }
+# Tab
+tab_active = { bg = "#282C34", fg = "#61AFEF" }  # Darkened background, Blue text
+tab_inactive = {}
+tab_width = 1
+
+# Count
+count_copied = { fg = "#98C379", bg = "#282C34" }  # Green on Darkened background
+count_cut = { fg = "#E06C75", bg = "#282C34" }  # Red on Darkened background
+count_selected = { fg = "#98C379", bg = "#282C34" }  # Green on Darkened background
+
+# Border
 border_symbol = "│"
-border_style = { fg = "border" }
+border_style = { fg = "#282C34" }  # Darkened background
 
-[tabs]
-active = { fg = "fg", bg = "bg", bold = true }
-inactive = { fg = "comment", bg = "gutter_bg" }
-sep_inner = { open = "", close = "" }
-sep_outer = { open = "", close = "" }
+# : }}}
 
-[mode]
-normal_main = { fg = "bg", bg = "keyword" }
-normal_alt = { fg = "keyword", bg = "gutter_bg" }
-select_main = { fg = "bg", bg = "function" }
-select_alt = { fg = "function", bg = "gutter_bg" }
-unset_main = { fg = "bg", bg = "variable" }
-unset_alt = { fg = "variable", bg = "gutter_bg" }
-
+# : Status {{{
 [status]
-overall = { fg = "fg", bg = "gutter_bg" }
-sep_left = { open = "", close = "" }
-sep_right = { open = "", close = "" }
-perm_type = { fg = "function" }
-perm_read = { fg = "success" }
-perm_write = { fg = "warning" }
-perm_exec = { fg = "error" }
-perm_sep = { fg = "comment" }
-progress_label = { fg = "accent", bold = true }
-progress_normal = { fg = "accent", bg = "gutter_bg" }
-progress_error = { fg = "error", bg = "gutter_bg" }
+separator_open = ""
+separator_close = ""
+separator_style = { fg = "#61AFEF", bg = "#282C34" }  # Blue on Darkened background
 
-[which]
-cols = 3
-mask = { bg = "gutter_bg" }
-cand = { fg = "accent" }
-rest = { fg = "comment" }
-desc = { fg = "fg" }
-separator = " -> "
-separator_style = { fg = "comment" }
+# Mode
+mode_normal = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
+mode_select = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
+mode_unset = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
 
-[confirm]
-border = { fg = "border" }
-title = { fg = "accent", bold = true }
-content = { fg = "fg" }
-list = { fg = "comment" }
-btn_yes = { fg = "bg", bg = "success" }
-btn_no = { fg = "bg", bg = "error" }
-btn_labels = ["Yes", "No"]
+# Progress
+progress_label = { fg = "#ABB2BF", bold = true }  # Light gray
+progress_normal = { fg = "#98C379", bg = "#282C34" }  # Green on Darkened background
+progress_error = { fg = "#E06C75", bg = "#282C34" }  # Red on Darkened background
 
-[spot]
-border = { fg = "border" }
-title = { fg = "accent", bold = true }
-tbl_col = { fg = "accent", bold = true }
-tbl_cell = { fg = "fg", bg = "selection" }
+# Permissions
+permissions_t = { fg = "#98C379" }  # Green
+permissions_r = { fg = "#E06C75" }  # Red
+permissions_w = { fg = "#D19A66" }  # Orange
+permissions_x = { fg = "#98C379" }  # Green
+permissions_s = { fg = "#ABB2BF" }  # Light gray
 
-[notify]
-title_info = { fg = "accent" }
-title_warn = { fg = "warning" }
-title_error = { fg = "error" }
+# : }}}
 
-[pick]
-border = { fg = "border" }
-active = { fg = "fg", bg = "selection" }
-inactive = { fg = "comment" }
+# : Select {{{
+[select]
+border = { fg = "#98C379" }  # Green
+active = { fg = "#D19A66", bold = true }  # Orange
+inactive = {}
 
+# : }}}
+
+# : Input {{{
 [input]
-border = { fg = "border" }
-title = { fg = "accent", bold = true }
-value = { fg = "fg" }
-selected = { fg = "bg", bg = "accent" }
+border = { fg = "#98C379" }  # Green
+title = {}
+value = {}
+selected = { reversed = true }
 
-[cmp]
-border = { fg = "border" }
-active = { fg = "fg", bg = "selection" }
-inactive = { fg = "comment" }
-icon_file = "📄"
-icon_folder = "📁"
-icon_command = "⚡"
+# : }}}
 
+# : Completion {{{
+[completion]
+border = { fg = "#98C379" }  # Green
+
+# : }}}
+
+# : Tasks {{{
 [tasks]
-border = { fg = "border" }
-title = { fg = "accent", bold = true }
-hovered = { fg = "fg", bg = "selection" }
+border = { fg = "#98C379" }  # Green
+title = {}
+hovered = { fg = "#D19A66", underline = true }  # Orange
 
+# : }}}
+
+# : Which {{{
+[which]
+mask = { bg = "#282C34" }  # Darkened background
+cand = { fg = "#98C379" }  # Green
+rest = { fg = "#ABB2BF" }  # Light gray
+desc = { fg = "#D19A66" }  # Orange
+separator = "  "
+separator_style = { fg = "#ABB2BF" }  # Light gray
+
+# : }}}
+
+# : Help {{{
 [help]
-on = { fg = "keyword", bold = true }
-run = { fg = "function" }
-desc = { fg = "fg" }
-hovered = { fg = "fg", bg = "selection" }
-footer = { fg = "comment" }
-icon_info = "ℹ️"
-icon_warn = "⚠️"
-icon_error = "❌"
+on = { fg = "#98C379" }  # Green
+run = { fg = "#D19A66" }  # Orange
+hovered = { reversed = true, bold = true }
+footer = { fg = "#ABB2BF", bg = "#282C34" }  # Light gray on Black
+
+# : }}}
+
+# : Notify {{{
+[notify]
+title_info = { fg = "#98C379" }  # Green
+title_warn = { fg = "#DDB700" }  # Red
+title_error = { fg = "#D02000" }  # Orange
+
+# : }}}
+
+# : File-specific styles {{{
 
 [filetype]
+
 rules = [
-  # Directories
-  { name = "*/", fg = "function" },
-  # Executables
-  { name = "*", is = "exec", fg = "success" },
-  # Symlinks
-  { name = "*", is = "link", fg = "accent" },
-  # Orphan symlinks
-  { name = "*", is = "orphan", fg = "error" },
-  # Hidden files
-  { name = ".*", fg = "comment" },
+    # Images
+    { mime = "image/*", fg = "#D19A66" },  # Orange
+
+    # Media
+    { mime = "video/*", fg = "#E06C75" },  # Red
+    { mime = "audio/*", fg = "#E06C75" },  # Red
+
+    # Archives
+    { mime = "application/zip", fg = "#C678DD" },  # Magenta
+    { mime = "application/x-tar", fg = "#C678DD" },  # Magenta
+    { mime = "application/x-bzip*", fg = "#C678DD" },  # Magenta
+    { mime = "application/x-bzip2", fg = "#C678DD" },  # Magenta
+    { mime = "application/x-7z-compressed", fg = "#C678DD" },  # Magenta
+    { mime = "application/x-rar", fg = "#C678DD" },  # Magenta
+    { mime = "application/x-xz", fg = "#C678DD" },  # Magenta
+
+    # Documents
+    { mime = "application/doc", fg = "#98C379" },  # Green
+    { mime = "application/pdf", fg = "#98C379" },  # Green
+    { mime = "application/rtf", fg = "#98C379" },  # Green
+    { mime = "application/vnd.*", fg = "#98C379" },  # Green
+
+    # Fallback
+    { name = "*", fg = "#ABB2BF" },  # Blue
+    { name = "*/", fg = "#61AFEF" }  # Blue
 ]
 
-[icon]
-# Use default icons but customize some colors
-prepend_exts = [
-  { name = "rs", text = "🦀", fg = "function" },
-  { name = "toml", text = "⚙️", fg = "accent" },
-  { name = "md", text = "📝", fg = "string" },
-  { name = "py", text = "🐍", fg = "function" },
-  { name = "js", text = "🟨", fg = "warning" },
-  { name = "ts", text = "🔷", fg = "function" },
-  { name = "json", text = "📋", fg = "string" },
-  { name = "yml", text = "📄", fg = "accent" },
-  { name = "yaml", text = "📄", fg = "accent" },
-]
+# : }}}
