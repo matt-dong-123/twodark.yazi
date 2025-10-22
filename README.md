@@ -3,7 +3,7 @@
 </div>
 
 <h3 align="center">
-	Example Flavor for <a href="https://github.com/sxyazi/yazi">Yazi</a>
+ TwoDark Flavor for <a href="https://github.com/sxyazi/yazi">Yazi</a>
 </h3>
 
 ## Cooking up a new flavor

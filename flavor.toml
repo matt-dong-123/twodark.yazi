@@ -1,0 +1,165 @@
+# TwoDark Yazi Flavor
+# Based on the TwoDark tmTheme color scheme
+
+[palette]
+bg = "#282C34"
+fg = "#ABB2BF"
+selection = "#3D4350"
+line_highlight = "#2B313A"
+caret = "#528BFF"
+gutter_bg = "#393939"
+gutter_fg = "#747369"
+gutter_selection_bg = "#515151"
+gutter_selection_fg = "#a09f93"
+
+# Syntax colors
+comment = "#5C6370"
+keyword = "#C678DD"
+string = "#98C379"
+function = "#61AFEF"
+variable = "#E06C75"
+class = "#E5C07B"
+number = "#D19A66"
+type = "#E5C07B"
+constant = "#D19A66"
+
+# UI colors
+border = "#393939"
+accent = "#61AFEF"
+error = "#E06C75"
+warning = "#E5C07B"
+success = "#98C379"
+
+[mgr]
+cwd = { fg = "accent", bold = true }
+hovered = { bg = "selection" }
+preview_hovered = { bg = "selection" }
+find_keyword = { fg = "accent", bold = true }
+find_position = { fg = "comment" }
+marker_selected = { fg = "accent" }
+marker_copied = { fg = "success" }
+marker_cut = { fg = "error" }
+marker_marked = { fg = "warning" }
+count_selected = { fg = "accent", bold = true }
+count_copied = { fg = "success", bold = true }
+count_cut = { fg = "error", bold = true }
+border_symbol = "│"
+border_style = { fg = "border" }
+
+[tabs]
+active = { fg = "fg", bg = "bg", bold = true }
+inactive = { fg = "comment", bg = "gutter_bg" }
+sep_inner = { open = "", close = "" }
+sep_outer = { open = "", close = "" }
+
+[mode]
+normal_main = { fg = "bg", bg = "keyword" }
+normal_alt = { fg = "keyword", bg = "gutter_bg" }
+select_main = { fg = "bg", bg = "function" }
+select_alt = { fg = "function", bg = "gutter_bg" }
+unset_main = { fg = "bg", bg = "variable" }
+unset_alt = { fg = "variable", bg = "gutter_bg" }
+
+[status]
+overall = { fg = "fg", bg = "gutter_bg" }
+sep_left = { open = "", close = "" }
+sep_right = { open = "", close = "" }
+perm_type = { fg = "function" }
+perm_read = { fg = "success" }
+perm_write = { fg = "warning" }
+perm_exec = { fg = "error" }
+perm_sep = { fg = "comment" }
+progress_label = { fg = "accent", bold = true }
+progress_normal = { fg = "accent", bg = "gutter_bg" }
+progress_error = { fg = "error", bg = "gutter_bg" }
+
+[which]
+cols = 3
+mask = { bg = "gutter_bg" }
+cand = { fg = "accent" }
+rest = { fg = "comment" }
+desc = { fg = "fg" }
+separator = " -> "
+separator_style = { fg = "comment" }
+
+[confirm]
+border = { fg = "border" }
+title = { fg = "accent", bold = true }
+content = { fg = "fg" }
+list = { fg = "comment" }
+btn_yes = { fg = "bg", bg = "success" }
+btn_no = { fg = "bg", bg = "error" }
+btn_labels = ["Yes", "No"]
+
+[spot]
+border = { fg = "border" }
+title = { fg = "accent", bold = true }
+tbl_col = { fg = "accent", bold = true }
+tbl_cell = { fg = "fg", bg = "selection" }
+
+[notify]
+title_info = { fg = "accent" }
+title_warn = { fg = "warning" }
+title_error = { fg = "error" }
+
+[pick]
+border = { fg = "border" }
+active = { fg = "fg", bg = "selection" }
+inactive = { fg = "comment" }
+
+[input]
+border = { fg = "border" }
+title = { fg = "accent", bold = true }
+value = { fg = "fg" }
+selected = { fg = "bg", bg = "accent" }
+
+[cmp]
+border = { fg = "border" }
+active = { fg = "fg", bg = "selection" }
+inactive = { fg = "comment" }
+icon_file = "📄"
+icon_folder = "📁"
+icon_command = "⚡"
+
+[tasks]
+border = { fg = "border" }
+title = { fg = "accent", bold = true }
+hovered = { fg = "fg", bg = "selection" }
+
+[help]
+on = { fg = "keyword", bold = true }
+run = { fg = "function" }
+desc = { fg = "fg" }
+hovered = { fg = "fg", bg = "selection" }
+footer = { fg = "comment" }
+icon_info = "ℹ️"
+icon_warn = "⚠️"
+icon_error = "❌"
+
+[filetype]
+rules = [
+  # Directories
+  { name = "*/", fg = "function" },
+  # Executables
+  { name = "*", is = "exec", fg = "success" },
+  # Symlinks
+  { name = "*", is = "link", fg = "accent" },
+  # Orphan symlinks
+  { name = "*", is = "orphan", fg = "error" },
+  # Hidden files
+  { name = ".*", fg = "comment" },
+]
+
+[icon]
+# Use default icons but customize some colors
+prepend_exts = [
+  { name = "rs", text = "🦀", fg = "function" },
+  { name = "toml", text = "⚙️", fg = "accent" },
+  { name = "md", text = "📝", fg = "string" },
+  { name = "py", text = "🐍", fg = "function" },
+  { name = "js", text = "🟨", fg = "warning" },
+  { name = "ts", text = "🔷", fg = "function" },
+  { name = "json", text = "📋", fg = "string" },
+  { name = "yml", text = "📄", fg = "accent" },
+  { name = "yaml", text = "📄", fg = "accent" },
+]
