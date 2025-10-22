@@ -39,12 +39,12 @@ separator_close = ""
 separator_style = { fg = "#61AFEF", bg = "#282C34" }  # Blue on Darkened background
 
 # Mode
-mode_normal = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
-mode_select = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
-mode_unset = { fg = "#282C34", bg = "#61AFEF", bold = true }  # Dark gray on Blue
+mode_normal = { fg = "#61AFEF", bg = "#282C34", bold = true }  # Blue on Dark gray
+mode_select = { fg = "#61AFEF", bg = "#282C34", bold = true }  # Blue on Dark gray
+mode_unset = { fg = "#61AFEF", bg = "#282C34", bold = true }  # Blue on Dark gray
 
 # Progress
-progress_label = { fg = "#ABB2BF", bold = true }  # Light gray
+progress_label = { fg = "#787878", bold = true }  # Grey
 progress_normal = { fg = "#98C379", bg = "#282C34" }  # Green on Darkened background
 progress_error = { fg = "#E06C75", bg = "#282C34" }  # Red on Darkened background
 
